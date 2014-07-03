@@ -1,0 +1,11 @@
+default[:graylog2][:version] = "0.20.3"
+default[:graylog2][:password_secret] = "Vf46d1Ut2YxamguLKpyv6It1MUma25oWILy8SIqrbXA3YxpUMD01sRRK4xqMP079JAGUiPM4VD9eN50xzqpyoSFdey7BR8XM"
+default[:graylog2][:login_password] = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  # echo -n admin | shasum -a 256
+default[:graylog2][:mongodb][:useauth] = "false"
+default[:graylog2][:mongodb][:user] = "grayloguser"
+default[:graylog2][:mongodb][:pass] = "graylogpass"
+default[:graylog2][:web_interface][:server_uris] = "http://127.0.0.1:12900/"
+default[:elasticsearch][:cluster][:name] = "es-graylog2"
+default[:elasticsearch][:path][:conf] = "/etc/elasticsearch"
+default[:elasticsearch][:path][:logs] = "/var/log/elasticsearch"
+default[:java][:jdk_version] = '7'
