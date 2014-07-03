@@ -1,4 +1,4 @@
-# graylog2-cookbook
+# chef-graylog2 cookbook
 
 Graylog2 cookbook installs [_Graylog2_](http://www.graylog2.org) centralized logging system. Current supported setup is all-in-one (Mongo, Elasticsearch, Graylog2 Server and Graylog2 Web Interface on 1 node).
 
@@ -19,7 +19,7 @@ Graylog2 cookbook installs [_Graylog2_](http://www.graylog2.org) centralized log
     <td><tt>[:graylog2][:version]</tt></td>
     <td>String</td>
     <td>Graylog version</td>
-    <td><tt>'0.20.0-rc.1'</tt></td>
+    <td><tt>'0.20.3'</tt></td>
   </tr>
     <tr>
     <td><tt>[:graylog2][:login_password]</tt></td>
