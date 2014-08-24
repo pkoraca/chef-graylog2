@@ -12,10 +12,16 @@ end
 
 path = "/opt/graylog2-web-interface-#{node[:graylog2][:version]}"
 
+if node[:graylog2][:use_local_files]
+	url = "http://localhost/graylog2-web-interface-#{node[:graylog2][:version]}.tgz"
+else
+	url = "https://github.com/Graylog2/graylog2-web-interface/releases/download/#{node[:graylog2][:version]}/graylog2-web-interface-#{node[:graylog2][:version]}.tgz"
+end
+
 if !::File.directory?(path)
 	Chef::Log.info "Directory #{path} does not exist. Unpacking Graylog2 Web Interface"
 	ark 'graylog2-web-interface' do
-	  url "https://github.com/Graylog2/graylog2-web-interface/releases/download/#{node[:graylog2][:version]}/graylog2-web-interface-#{node[:graylog2][:version]}.tgz"
+	  url url
 	  version node[:graylog2][:version]
 	  prefix_root "/opt"
 	  path "/opt"
