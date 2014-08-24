@@ -9,16 +9,9 @@ platforms:
   - name: centos-6.5
 
 suites:
-  - name: default
-    run_list:
-      - recipe[graylog2::default]
-    attributes:
-      graylog2:
-        version: "0.20.0-rc.1"
-
   - name: graylog2-latest
     run_list:
       - recipe[graylog2::default]
     attributes:
       graylog2:
-        version: "0.20.3"
+        version: "0.20.6"

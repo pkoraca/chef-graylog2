@@ -10,4 +10,4 @@
 #GL_USER=graylog2
 
 # heap size configuration
-GL_HEAP_SIZE="-Xms512M -Xmx512M"
+GL_HEAP_SIZE="-Xms<%= node[:graylog2][:server][:xms] %>M -Xmx<%= node[:graylog2][:server][:xmx] %>M"

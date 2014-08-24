@@ -19,7 +19,7 @@ Graylog2 cookbook installs [_Graylog2_](http://www.graylog2.org) centralized log
     <td><tt>[:graylog2][:version]</tt></td>
     <td>String</td>
     <td>Graylog version</td>
-    <td><tt>'0.20.4'</tt></td>
+    <td><tt>'0.20.6'</tt></td>
   </tr>
     <tr>
     <td><tt>[:graylog2][:login_password]</tt></td>

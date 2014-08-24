@@ -1,4 +1,14 @@
+include_recipe 'java'
 
+%w{/etc/graylog2 /var/log/graylog2 /var/run/graylog2}.each do |dir|
+  directory dir do
+	    owner "root"
+	    group "root"
+	    mode "0755"
+	    recursive true
+	    action :create
+	end
+end
 
 path = "/opt/graylog2-web-interface-#{node[:graylog2][:version]}"
 

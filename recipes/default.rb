@@ -7,24 +7,14 @@ include_recipe 'java'
 include_recipe "graylog2::mongo"
 include_recipe "graylog2::elasticsearch"
 
-directory "/etc/graylog2" do
-    owner "root" and group "root" and mode 0755
-    recursive true
-    action :create
-end
-
-directory "/var/log/graylog2" do
-	owner "root"
-	group "root"
-	mode "0755"
-	action :create
-end
-
-directory "/var/run/graylog2" do
-	owner "root"
-	group "root"
-	mode "0755"
-	action :create
+%w{/etc/graylog2 /var/log/graylog2 /var/run/graylog2}.each do |dir|
+  directory dir do
+	    owner "root"
+	    group "root"
+	    mode "0755"
+	    recursive true
+	    action :create
+	end
 end
 
 include_recipe "graylog2::server"
