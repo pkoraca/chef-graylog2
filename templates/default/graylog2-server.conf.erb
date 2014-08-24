@@ -26,7 +26,7 @@ root_password_sha2 = <%= node[:graylog2][:login_password] %>
 plugin_dir = plugin
 
 # REST API listen URI. Must be reachable by other graylog2-server nodes if you run a cluster.
-rest_listen_uri = http://127.0.0.1:12900/
+rest_listen_uri = http://0.0.0.0:12900/
 # REST API transport address. Defaults to first non-loopback IPv4 system address and port 12900.
 # This will be promoted in the cluster discovery APIs and other nodes may try to connect on this
 # address. (see rest_listen_uri)
@@ -118,7 +118,7 @@ ring_size = 1024
 # mongodb_useauth = true
 # mongodb_user = <%= node[:graylog2][:mongodb][:user] %>
 # mongodb_password = <%= node[:graylog2][:mongodb][:pass] %>
-mongodb_host = 127.0.0.1
+mongodb_host = <%= node[:graylog2][:mongodb][:host] %>
 #mongodb_replica_set = localhost:27017,localhost:27018,localhost:27019
 mongodb_database = graylog2
 mongodb_port = 27017

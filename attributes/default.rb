@@ -5,6 +5,7 @@ default[:graylog2][:login_password] = "8c6976e5b5410415bde908bd4dee15dfb167a9c87
 default[:graylog2][:mongodb][:useauth] = "false"
 default[:graylog2][:mongodb][:user] = "grayloguser"
 default[:graylog2][:mongodb][:pass] = "graylogpass"
+default[:graylog2][:mongodb][:host] = "127.0.0.1"
 default[:graylog2][:web_interface][:server_uris] = "http://127.0.0.1:12900/"
 default[:graylog2][:server][:xms] = 512
 default[:graylog2][:server][:xmx] = 512
