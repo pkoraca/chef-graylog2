@@ -16,7 +16,7 @@ path = "/opt/graylog2-server-#{node[:graylog2][:version]}"
 if node[:graylog2][:use_local_files]
   url = "http://localhost/graylog2-server-#{node[:graylog2][:version]}.tgz"
 else
-  url = "https://github.com/Graylog2/graylog2-server/releases/download/#{node[:graylog2][:version]}/graylog2-server-#{node[:graylog2][:version]}.tgz"
+  url = "http://packages.graylog2.org/releases/graylog2-server/graylog2-server-#{node[:graylog2][:version]}.tgz"
 end
 
 if !::File.directory?(path)
