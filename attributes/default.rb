@@ -14,4 +14,6 @@ default[:elasticsearch][:cluster][:name] = "es-graylog2"
 default[:elasticsearch][:path][:conf] = "/etc/elasticsearch"
 default[:elasticsearch][:path][:logs] = "/var/log/elasticsearch"
 default[:elasticsearch][:allocated_memory] = "512m"
+default[:elasticsearch][:version] = "1.3.4"
+default['elasticsearch']['download_url'] = 'https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.4.tar.gz'
 default[:java][:jdk_version] = '7'
