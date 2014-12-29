@@ -52,6 +52,14 @@ rest_listen_uri = http://0.0.0.0:12900/
 # pay attention to the working directory of the server, maybe use an absolute path here
 #elasticsearch_config_file = /etc/graylog2-elasticsearch.yml
 
+# Graylog2 will use multiple indices to store documents in. You can configured the strategy it uses to determine
+# when to rotate the currently active write index.
+# It supports multiple rotation strategies:
+#   - "count" of messages per index, use elasticsearch_max_docs_per_index below to configure
+#   - "size" per index, use elasticsearch_max_size_per_index below to configure
+# valid values are "count", "size" and "time", default is "count"
+rotation_strategy = count
+
 # (Approximate) maximum number of documents in an Elasticsearch index before a new index
 # is being created, also see no_retention and elasticsearch_max_number_of_indices.
 elasticsearch_max_docs_per_index = <%= node[:graylog2][:server][:elasticsearch_max_docs_per_index] %>

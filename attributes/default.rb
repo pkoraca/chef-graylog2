@@ -1,5 +1,5 @@
 default[:graylog2][:use_local_files] = false # if true, set up http server on http://localhost:80 and copy ie. graylog2-*-0.20.6.tgz
-default[:graylog2][:version] = "0.91.3"
+default[:graylog2][:version] = "0.92.3"
 default[:graylog2][:password_secret] = "Vf46d1Ut2YxamguLKpyv6It1MUma25oWILy8SIqrbXA3YxpUMD01sRRK4xqMP079JAGUiPM4VD9eN50xzqpyoSFdey7BR8XM"
 default[:graylog2][:login_password] = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  # echo -n admin | shasum -a 256
 default[:graylog2][:mongodb][:useauth] = false
