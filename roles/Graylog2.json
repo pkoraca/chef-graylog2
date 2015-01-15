@@ -5,7 +5,7 @@
     "default_attributes": {},
     "override_attributes": {
         "graylog2": {
-            "version": "0.92.3",
+            "version": "0.92.4",
             "server": {
                 "is_master": true,
                 "xms": "512",
@@ -14,7 +14,7 @@
                 "elasticsearch_max_number_of_indices": "4",
                 "elasticsearch_shards": "4",
                 "elasticsearch_replicas": "0",
-                "output_batch_size": "25",
+                "output_batch_size": "30",
                 "processbuffer_processors": "4",
                 "outputbuffer_processors": "3",
                 "ring_size": "1024",
@@ -34,12 +34,27 @@
             }
         },
         "elasticsearch": {
-          "version": "1.3.4",
+          "version": "1.4.2",
+					"allocated_memory": "1024m",
+					"gateway": {
+						"expected_nodes": "3"
+					},
+					"discovery": {
+						"zen": {
+							"minimum_master_nodes": "7"
+						}
+					},
+					"custom_config": {
+						"gateway.recover_after_time": "5m",
+						"indices.recovery.max_bytes_per_sec": "20mb",
+						"index.refresh_interval": "5s",
+						"index.merge.scheduler.max_thread_count": "1",
+						"index.translog.flush_threshold_size": "1gb"
+					},
           "cluster": {
           "name": "test_graylog2_chef"
-      },
-      "allocated_memory": "1024m"
-    }
+      		} 
+			}
     },
     "chef_type": "role",
     "run_list": [
