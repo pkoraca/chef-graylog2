@@ -49,7 +49,7 @@ node.default[:graylog2][:server][:java_args] = "#{node[:graylog2][:server][:java
 
 if node[:graylog2][:use_oracle_java]
 	node.default[:graylog2][:server][:java_args] = "#{node[:graylog2][:server][:java_args]} #{node[:graylog2][:server][:java_args_oracle]}"
-	node.default['java']['install_flavor'] = 'oracle'
-	node.default['java']['jdk']['7']['x86_64']['url'] = 'http://download.oracle.com/otn-pub/java/jdk/7u4-b20/jdk-7u4-linux-x64.tar.gz'
-	node.default['java']['oracle']['accept_oracle_download_terms'] = true
+	node.default[:java][:install_flavor] = 'oracle'
+	node.default[:java][:jdk]['7'][:x86_64][:url] = 'http://download.oracle.com/otn-pub/java/jdk/7u4-b20/jdk-7u4-linux-x64.tar.gz'
+	node.default[:java][:oracle][:accept_oracle_download_terms] = true
 end
