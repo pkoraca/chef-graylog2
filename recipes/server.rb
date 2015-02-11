@@ -43,6 +43,7 @@ template "graylog2-server-init" do
   owner "root"
   group "root"
   mode "0755"
+  notifies :restart, "service[graylog2-server]"
 end
 
 template "graylog2-server.conf" do
@@ -60,6 +61,7 @@ template "graylog2-server-sysconfig" do
   owner "root"
   group "root"
   mode "0755"
+  notifies :restart, "service[graylog2-server]"
 end
 
 template "log4j.xml" do
