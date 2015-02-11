@@ -4,18 +4,8 @@
     "json_class": "Chef::Role",
     "default_attributes": {},
     "override_attributes": {
-        "java": {
-            "install_flavor": "oracle",
-            "jdk": {
-                "7": {
-                    "x86_64": { "url": "http://download.oracle.com/otn-pub/java/jdk/7u4-b20/jdk-7u4-linux-x64.tar.gz" }
-                }
-                },
-            "oracle": {
-                "accept_oracle_download_terms": true
-            }
-            },
         "graylog2": {
+            "use_oracle_java": false,
             "version": "0.92.4",
             "server": {
                 "is_master": true,

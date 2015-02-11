@@ -3,7 +3,6 @@
 # Recipe:: default
 #
 
-include_recipe 'java'
 include_recipe "graylog2::mongo"
 include_recipe "graylog2::elasticsearch"
 
