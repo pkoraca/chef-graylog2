@@ -110,7 +110,7 @@ elasticsearch_node_name = <%= node[:hostname] + "_GRAYLOG_SERVER" %>
 #elasticsearch_http_enabled = false
 
 elasticsearch_discovery_zen_ping_multicast_enabled = false
-elasticsearch_discovery_zen_ping_unicast_hosts = 0.0.0.0:9300
+elasticsearch_discovery_zen_ping_unicast_hosts = <%= node[:graylog2][:server][:elasticsearch_discovery_zen_ping_unicast_hosts].join(",") %>
 
 # Change the following setting if you are running into problems with timeouts during Elasticsearch cluster discovery.
 # The setting is specified in milliseconds, the default is 5000ms (5 seconds).

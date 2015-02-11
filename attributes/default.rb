@@ -1,5 +1,6 @@
 default[:graylog2][:use_local_files] = false # if true, set up http server on http://localhost:80 and copy ie. graylog2-*-0.20.6.tgz
 default[:graylog2][:version] = "0.92.4"
+default[:graylog2][:use_oracle_java] = false
 default[:graylog2][:password_secret] = "Vf46d1Ut2YxamguLKpyv6It1MUma25oWILy8SIqrbXA3YxpUMD01sRRK4xqMP079JAGUiPM4VD9eN50xzqpyoSFdey7BR8XM"
 default[:graylog2][:login_password] = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  # echo -n admin | shasum -a 256
 default[:graylog2][:mongodb][:useauth] = false
@@ -10,6 +11,7 @@ default[:graylog2][:web_interface][:server_uris] = ["http://127.0.0.1:12900/"]
 default[:graylog2][:server][:xms] = 512
 default[:graylog2][:server][:xmx] = 512
 default[:graylog2][:server][:is_master] = true
+default[:graylog2][:server][:elasticsearch_discovery_zen_ping_unicast_hosts] = ["127.0.0.1:9300"]
 default[:graylog2][:server][:elasticsearch_max_docs_per_index] = 10000000
 default[:graylog2][:server][:elasticsearch_max_number_of_indices] = 4
 default[:graylog2][:server][:elasticsearch_shards] = 4

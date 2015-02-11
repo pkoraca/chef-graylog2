@@ -48,11 +48,11 @@
           "version": "1.4.2",
 					"allocated_memory": "1024m",
 					"gateway": {
-						"expected_nodes": "3"
+						"expected_nodes": "1"
 					},
 					"discovery": {
 						"zen": {
-							"minimum_master_nodes": "7"
+							"minimum_master_nodes": "1"
 						}
 					},
 					"custom_config": {
