@@ -14,6 +14,7 @@ default[:graylog2][:server][:jmx_port] = 12999
 default[:graylog2][:server][:xms] = 512
 default[:graylog2][:server][:xmx] = 512
 default[:graylog2][:server][:is_master] = true
+default[:graylog2][:server][:elasticsearch_index_prefix] = "graylog2"
 default[:graylog2][:server][:elasticsearch_discovery_zen_ping_unicast_hosts] = ["127.0.0.1:9300"]
 default[:graylog2][:server][:elasticsearch_max_docs_per_index] = 10000000
 default[:graylog2][:server][:elasticsearch_max_number_of_indices] = 4
