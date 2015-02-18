@@ -11,6 +11,7 @@
                 "is_master": true,
                 "xms": "512",
                 "xmx": "512",
+								"elasticsearch_index_prefix": "glog",
                 "elasticsearch_max_docs_per_index": "10000000",
                 "elasticsearch_max_number_of_indices": "4",
                 "elasticsearch_shards": "4",

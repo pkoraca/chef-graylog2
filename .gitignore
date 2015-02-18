@@ -11,11 +11,12 @@ pkg/
 /cookbooks
 Vagrantfile*
 Berksfile.lock
-
+spec/
+Cheffile
 # Bundler
 Gemfile.lock
 bin/*
 .bundle/*
-
+test/
 .kitchen/
 .kitchen.local.yml
