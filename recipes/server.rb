@@ -1,17 +1,17 @@
 
 include_recipe 'java'
 
+directory "/data/journal" do
+    owner "root"
+    group "root"
+    mode "0755"
+    recursive true
+    action :create
+end
+
 package "graylog-server" do
   action :install
 end
-
-  directory "/data/journal" do
-      owner "root"
-      group "root"
-      mode "0755"
-      recursive true
-      action :create
-  end
 
 template "graylog-server-init" do
   path "/etc/init.d/graylog-server"

@@ -3,13 +3,15 @@
 # Recipe:: default
 #
 
-remote_file "#{Chef::Config[:file_cache_path]}/graylog-1.0-repository-el6_latest.rpm" do
-    source "https://packages.graylog2.org/repo/packages/graylog-1.0-repository-el6_latest.rpm"
+repo = "graylog-#{node[:graylog2][:version_minor]}-repository-el6_latest.rpm"
+
+remote_file "#{Chef::Config[:file_cache_path]}/#{repo}" do
+    source "https://packages.graylog2.org/repo/packages/#{repo}"
     action :create
 end
 
-package "graylog-1.0-repository-el6_latest.rpm" do
-	source "#{Chef::Config[:file_cache_path]}/graylog-1.0-repository-el6_latest.rpm"
+package "#{repo}" do
+	source "#{Chef::Config[:file_cache_path]}/#{repo}"
 	action :install
 end
 
