@@ -119,7 +119,7 @@ elasticsearch_shards = <%= node[:graylog2][:server][:elasticsearch_shards] %>
 elasticsearch_replicas = <%= node[:graylog2][:server][:elasticsearch_replicas] %>
 
 # Prefix for all Elasticsearch indices and index aliases managed by Graylog.
-elasticsearch_index_prefix = graylog2
+elasticsearch_index_prefix = <%= node[:graylog2][:server][:elasticsearch_index_prefix] %>
 
 # Do you want to allow searches with leading wildcards? This can be extremely resource hungry and should only
 # be enabled with care. See also: https://www.graylog.org/documentation/general/queries/
