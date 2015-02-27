@@ -36,7 +36,7 @@ root_password_sha2 = <%= node[:graylog2][:login_password] %>
 #root_timezone = UTC
 
 # Set plugin directory here (relative or absolute)
-plugin_dir = /opt/graylog2-server/plugin
+plugin_dir = plugin
 
 # REST API listen URI. Must be reachable by other graylog2-server nodes if you run a cluster.
 rest_listen_uri = http://0.0.0.0:12900/
