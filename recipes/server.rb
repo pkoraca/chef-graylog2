@@ -43,7 +43,7 @@ template "graylog-server.conf" do
 end
 
 template "graylog-server-sysconfig" do
-  path "/etc/sysconfig/graylog2-server"
+  path "/etc/sysconfig/graylog-server"
   source "graylog-server-sysconfig.erb"
   owner "root"
   group "root"
