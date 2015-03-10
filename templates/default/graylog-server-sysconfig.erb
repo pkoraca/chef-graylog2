@@ -1,13 +1,12 @@
-# Set custom variables for the init script and start up
-# for graylog2-server here!
+# Path to the java executable.
+JAVA=/usr/bin/java
 
-# path to your java executable
-#JAVA=/usr/bin/java
+# Default Java options for heap and garbage collection.
+GRAYLOG_SERVER_JAVA_OPTS="-Xms<%= node[:graylog2][:server][:xms] %>M -Xmx<%= node[:graylog2][:server][:xmx] %>M -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow"
 
-# user to run graylog2
-# defaults to "graylog2" if not set here
-# make sure to use "root" if you want inputs on ports <1024
-#GL_USER=graylog2
+# Pass some extra args to graylog-server. (i.e. "-d" to enable debug mode)
+GRAYLOG_SERVER_ARGS=""
 
-# heap size configuration
-GL_HEAP_SIZE="-Xms<%= node[:graylog2][:server][:xms] %>M -Xmx<%= node[:graylog2][:server][:xmx] %>M"
+# Program that will be used to wrap the graylog-server command. Useful to
+# support programs like authbind.
+GRAYLOG_COMMAND_WRAPPER=""
