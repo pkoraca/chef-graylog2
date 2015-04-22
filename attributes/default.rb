@@ -44,6 +44,12 @@ default[:elasticsearch][:path][:conf] = "/etc/elasticsearch"
 default[:elasticsearch][:path][:logs] = "/var/log/elasticsearch"
 default[:elasticsearch][:allocated_memory] = "512m"
 default[:elasticsearch][:version] = "1.4.2"
+default[:elasticsearch][:gc_settings] =<<-CONFIG
+  -XX:+UseParNewGC
+  -XX:+UseConcMarkSweepGC
+  -XX:CMSInitiatingOccupancyFraction=75
+  -XX:+UseCMSInitiatingOccupancyOnly
+CONFIG
 default[:java][:jdk_version] = '7'
 
 host_ip = node[:network][:interfaces][:eth0][:addresses].detect{|k,v| v[:family] == "inet" }.first
