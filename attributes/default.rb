@@ -25,6 +25,7 @@ default[:graylog2][:server][:output_batch_size] = 25
 default[:graylog2][:server][:processbuffer_processors] = 4
 default[:graylog2][:server][:outputbuffer_processors] = 3
 default[:graylog2][:server][:ring_size] = 1024
+default[:graylog2][:server][:rest_enable_cors] = false
 default[:graylog2][:server][:stream_processing_timeout] = 5000
 default[:graylog2][:server][:stream_processing_max_faults] = 10
 default[:graylog2][:server][:input_cache_max_size] = 5000

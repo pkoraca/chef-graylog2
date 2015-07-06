@@ -7,7 +7,7 @@
         "graylog2": {
             "use_oracle_java": false,
 						"version": "0.92.4",
-						"version_minor": "1.0",
+						"version_minor": "1.1",
             "server": {
                 "is_master": true,
                 "xms": "512",
@@ -20,6 +20,7 @@
                 "processbuffer_processors": "4",
                 "outputbuffer_processors": "3",
                 "ring_size": "1024",
+                "rest_enable_cors": false,
                 "stream_processing_timeout": "5000",
                 "stream_processing_max_faults": "10",
                 "input_cache_max_size": "5000",

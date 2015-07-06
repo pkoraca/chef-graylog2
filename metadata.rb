@@ -4,7 +4,7 @@ maintainer_email 'pkoraca@gmail.com'
 license          'Apache'
 description      'Installs/Configures graylog'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '2.0.3'
+version          '2.0.4'
 
 supports "centos"
 
