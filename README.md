@@ -2,11 +2,12 @@
 
 Graylog cookbook installs [_Graylog_](http://www.graylog2.org) centralized logging system. Supports all-in-one and distributed deployment.
 
-If you are looking for official Graylog cookbook you can find it [_here](https://github.com/Graylog2/graylog2-cookbook).
+If you are looking for official Graylog cookbook you can find it [_here_](https://github.com/Graylog2/graylog2-cookbook).
 
 ## Supported Platforms
 
 - CentOS 6
+- CentOS 7
 
 ## Attributes
 

@@ -7,6 +7,7 @@ provisioner:
 
 platforms:
   - name: centos-6.5
+  - name: centos-7.1
 
 suites:
   - name: graylog2-latest
@@ -14,4 +15,4 @@ suites:
       - recipe[graylog2::default]
     attributes:
       graylog2:
-        version: "0.20.6"
+        version_minor: "1.2"

@@ -7,7 +7,7 @@
         "graylog2": {
             "use_oracle_java": false,
 						"version": "0.92.4",
-						"version_minor": "1.1",
+						"version_minor": "1.2",
             "server": {
                 "is_master": true,
                 "xms": "512",
@@ -37,7 +37,7 @@
             }
         },
         "elasticsearch": {
-          "version": "1.4.2",
+          "version": "1.7.2",
 					"allocated_memory": "1024m",
 					"gateway": {
 						"expected_nodes": "1"
