@@ -6,7 +6,6 @@
     "override_attributes": {
         "graylog2": {
             "use_oracle_java": false,
-						"version": "0.92.4",
 						"version_minor": "1.2",
             "server": {
                 "is_master": true,

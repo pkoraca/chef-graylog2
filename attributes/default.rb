@@ -1,5 +1,4 @@
 default[:graylog2][:use_local_files] = false # if true, set up http server on http://localhost:80 and copy ie. graylog2-*-0.20.6.tgz
-default[:graylog2][:version] = "0.92.4"
 default[:graylog2][:version_minor] = "1.2"
 default[:graylog2][:use_oracle_java] = false
 default[:graylog2][:password_secret] = "Vf46d1Ut2YxamguLKpyv6It1MUma25oWILy8SIqrbXA3YxpUMD01sRRK4xqMP079JAGUiPM4VD9eN50xzqpyoSFdey7BR8XM"

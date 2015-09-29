@@ -1,10 +1,6 @@
 include_recipe 'java'
 
-#if (platform_family?('rhel') && node['platform_version'].to_i >= 7)
-#  repo = "graylog-#{node[:graylog2][:version_minor]}-repository-el7_latest.rpm"
-#else
-  repo = "graylog-#{node[:graylog2][:version_minor]}-repository-el6_latest.rpm"
-#end
+repo = "graylog-#{node[:graylog2][:version_minor]}-repository-el6_latest.rpm"
 
 remote_file "#{Chef::Config[:file_cache_path]}/#{repo}" do
     source "https://packages.graylog2.org/repo/packages/#{repo}"
@@ -19,14 +15,6 @@ end
 package "graylog-web" do
   action :install
 end
-
-#template "graylog-web-init" do
-#	path "/etc/init.d/graylog-web"
-#	source "graylog-web-initscript.erb"
-#	owner "root"
-#	group "root"
-#	mode "0755"
-#end
 
 template "graylog-web.conf" do
 	path "/etc/graylog/web/web.conf"

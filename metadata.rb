@@ -9,6 +9,5 @@ version          '2.1.0'
 supports "centos"
 
 depends "java"
-#depends "mongodb", "0.16.1"
 depends "mongodb", "0.16.3"
 depends "elasticsearch", "0.3.13"
