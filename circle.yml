@@ -1,0 +1,5 @@
+machine:
+  timezone:
+    UTC
+  ruby:
+    version: ruby-2.1.5
