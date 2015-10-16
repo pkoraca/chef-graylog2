@@ -5,11 +5,14 @@ default[:graylog2][:password_secret] = "Vf46d1Ut2YxamguLKpyv6It1MUma25oWILy8SIqr
 default[:graylog2][:login_password] = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  # echo -n admin | shasum -a 256
 default[:graylog2][:user] = "graylog"
 default[:graylog2][:group] = "graylog"
+
 default[:graylog2][:mongodb][:useauth] = false
 default[:graylog2][:mongodb][:user] = "grayloguser"
 default[:graylog2][:mongodb][:pass] = "graylogpass"
 default[:graylog2][:mongodb][:host] = "127.0.0.1"
+
 default[:graylog2][:web_interface][:server_uris] = ["http://127.0.0.1:12900/"]
+
 default[:graylog2][:server][:java_args] = "-jar -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow -Dlog4j.configuration=file:///opt/graylog2-server/log4j.xml"
 default[:graylog2][:server][:java_args_oracle] = "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder"
 default[:graylog2][:server][:jmx_port] = 12999
@@ -41,6 +44,14 @@ default[:graylog2][:server][:transport_email_auth_username] = "you@example.com"
 default[:graylog2][:server][:transport_email_auth_password ] = "secret"
 default[:graylog2][:server][:transport_email_subject_prefix] = "[graylog2]"
 default[:graylog2][:server][:transport_email_from_email] = "graylog2@example.com"
+default[:graylog2][:server][:transport_email_web_interface_url] = "https://graylog2.example.com"
+default[:graylog2][:server][:plugin_dir] = "/usr/share/graylog-server/plugin"
+default[:graylog2][:server][:allow_leading_wildcard_searches] = false
+default[:graylog2][:server][:message_journal_enabled] = true
+default[:graylog2][:server][:message_journal_dir] = "/data/journal"
+default[:graylog2][:server][:message_journal_max_age] = "12h"
+default[:graylog2][:server][:message_journal_max_size] = "5gb"
+default[:graylog2][:server][:dashboard_widget_default_cache_time] = "60s"
 default[:elasticsearch][:cluster][:name] = "es-graylog2"
 default[:elasticsearch][:path][:conf] = "/etc/elasticsearch"
 default[:elasticsearch][:path][:logs] = "/var/log/elasticsearch"
