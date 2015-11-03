@@ -3,3 +3,7 @@ machine:
     UTC
   ruby:
     version: ruby-2.1.5
+
+test:
+  override:
+    - chef exec foodcritic . -X spec -f any -t ~FC003
