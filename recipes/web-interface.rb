@@ -19,8 +19,8 @@ end
 template "graylog-web.conf" do
 	path "/etc/graylog/web/web.conf"
 	source "graylog-web-interface.conf.erb"
-  	owner node.graylog2[:user]
-  	group node.graylog2[:group]
+  	owner node.graylog2[:web_interface][:user]
+  	group node.graylog2[:web_interface][:group]
 	mode "0644"
 end
 

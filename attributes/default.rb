@@ -12,6 +12,8 @@ default[:graylog2][:mongodb][:pass] = "graylogpass"
 default[:graylog2][:mongodb][:host] = "127.0.0.1"
 
 default[:graylog2][:web_interface][:server_uris] = ["http://127.0.0.1:12900/"]
+default[:graylog2][:web_interface][:user] = "graylog-web"
+default[:graylog2][:web_interface][:group] = "graylog-web"
 
 default[:graylog2][:server][:java_args] = "-jar -XX:NewRatio=1 -XX:PermSize=128m -XX:MaxPermSize=256m -server -XX:+ResizeTLAB -XX:+UseConcMarkSweepGC -XX:+CMSConcurrentMTEnabled -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:-OmitStackTraceInFastThrow -Dlog4j.configuration=file:///opt/graylog2-server/log4j.xml"
 default[:graylog2][:server][:java_args_oracle] = "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder"
