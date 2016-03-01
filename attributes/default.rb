@@ -1,5 +1,5 @@
 default[:graylog2][:use_local_files] = false # if true, set up http server on http://localhost:80 and copy ie. graylog2-*-0.20.6.tgz
-default[:graylog2][:version_minor] = "1.2"
+default[:graylog2][:version_minor] = "1.3"
 default[:graylog2][:use_oracle_java] = false
 default[:graylog2][:password_secret] = "Vf46d1Ut2YxamguLKpyv6It1MUma25oWILy8SIqrbXA3YxpUMD01sRRK4xqMP079JAGUiPM4VD9eN50xzqpyoSFdey7BR8XM"
 default[:graylog2][:login_password] = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"  # echo -n admin | shasum -a 256
@@ -58,7 +58,7 @@ default[:elasticsearch][:cluster][:name] = "es-graylog2"
 default[:elasticsearch][:path][:conf] = "/etc/elasticsearch"
 default[:elasticsearch][:path][:logs] = "/var/log/elasticsearch"
 default[:elasticsearch][:allocated_memory] = "512m"
-default[:elasticsearch][:version] = "1.7.2"
+default[:elasticsearch][:version] = "1.7.5"
 default[:elasticsearch][:gc_settings] =<<-CONFIG
   -XX:+UseParNewGC
   -XX:+UseConcMarkSweepGC
@@ -67,8 +67,8 @@ default[:elasticsearch][:gc_settings] =<<-CONFIG
 CONFIG
 default[:java][:jdk_version] = '7'
 
-host_ip = node[:network][:interfaces][:eth0][:addresses].detect{|k,v| v[:family] == "inet" }.first
-node.default[:graylog2][:server][:java_args] = "#{node[:graylog2][:server][:java_args]} -Djava.rmi.server.hostname=#{host_ip} -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=#{node[:graylog2][:server][:jmx_port]} -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+# host_ip = node[:network][:interfaces][:eth0][:addresses].detect{|k,v| v[:family] == "inet" }.first
+# node.default[:graylog2][:server][:java_args] = "#{node[:graylog2][:server][:java_args]} -Djava.rmi.server.hostname=#{host_ip} -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=#{node[:graylog2][:server][:jmx_port]} -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
 
 if node[:graylog2][:use_oracle_java]
 	node.default[:graylog2][:server][:java_args] = "#{node[:graylog2][:server][:java_args]} #{node[:graylog2][:server][:java_args_oracle]}"
